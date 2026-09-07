@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* vivid 키트. 디스플레이는 Amalfi Coast 대체로 Noto Serif 200, UI는 Sora */
+@theme {
+  --font-sans: "Sora", "Noto Sans KR", system-ui, sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  --color-brand: #908592;
+  --color-ink: #312a23;
+  --color-accent: #61ce70;
+  --color-paper: #ffffff;
+  --color-cream: #fff8f0;
+  --color-night: #181818;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+@keyframes pin-bounce {
+  0%,
+  100% {
+    transform: translate(-50%, -100%);
+  }
+  45% {
+    transform: translate(-50%, calc(-100% - 12px));
+  }
+  60% {
+    transform: translate(-50%, calc(-100% - 4px));
+  }
+}
+
+.map-pin {
+  position: absolute;
+  left: 42%;
+  top: 52%;
+  z-index: 2;
+  transform: translate(-50%, -100%);
+  transform-origin: center bottom;
+  animation: pin-bounce 0.9s ease-in-out infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* 히어로는 로컬 mp4 1장만. object-fit으로 꽉 채운다 */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #181818;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-media-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 24, 24, 0.45);
+}
