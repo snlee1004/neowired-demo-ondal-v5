@@ -14,7 +14,7 @@ export default function CTA({ onBook }) {
           preload="metadata"
           poster="/images/cosmetic-dentistry-smile-profile.jpg"
         />
-        <div className="absolute inset-0 bg-night/70" />
+        <div className="hero-media-mask" />
         <div className="relative z-10 mx-auto w-full max-w-[800px] px-5">
           {/* 상단 히어로와 같은 세리프·산세리프 조합 */}
           <p className="font-serif text-[26px] font-extralight leading-none md:text-[56px]">

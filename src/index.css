@@ -85,5 +85,11 @@ body {
 .hero-media-mask {
   position: absolute;
   inset: 0;
-  background: rgba(24, 24, 24, 0.45);
+  /* 전체는 덜 어둡게, 글씨 있는 아래만 조금 더 깔아 대비 유지 */
+  background: linear-gradient(
+    to top,
+    rgba(24, 24, 24, 0.48) 0%,
+    rgba(24, 24, 24, 0.16) 50%,
+    rgba(24, 24, 24, 0.2) 100%
+  );
 }
