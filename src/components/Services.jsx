@@ -3,7 +3,7 @@ import ImgSlot from "./ImgSlot.jsx";
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#f6f3f1] py-20">
+    <section id="services" className="bg-[#f6f3f1] pb-16 pt-8 md:pb-20 md:pt-10">
       <div className="mx-auto max-w-[1140px] px-5">
         <p className="text-sm tracking-widest text-brand">SERVICES</p>
         <h2 className="mt-3 font-serif text-3xl md:text-4xl">무엇이 가능할까요?</h2>

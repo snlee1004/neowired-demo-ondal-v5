@@ -26,16 +26,18 @@ export default function Hero({ onBook }) {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1300px] text-paper">
-        <p className="flex flex-wrap items-baseline gap-x-2 font-serif font-extralight leading-none">
-          <span className="text-[40px] md:text-[56px]">당신의</span>
-          <span className="text-[58px] md:text-[78px]">미소를</span>
-          <span className="text-[40px] md:text-[56px]">위한</span>
+        {/* 모바일은 영상 위를 덜 가리도록 타이틀 축소. md부터 기존 크기 */}
+        <p className="flex flex-wrap items-baseline gap-x-1.5 font-serif font-extralight leading-none md:gap-x-2">
+          <span className="text-[26px] md:text-[56px]">당신의</span>
+          <span className="text-[36px] md:text-[78px]">미소를</span>
+          <span className="text-[26px] md:text-[56px]">위한</span>
         </p>
         <p className="mt-2 text-right font-sans text-[20px] font-light uppercase leading-[1.3] tracking-[0.12em] md:text-[36px]">
           임플란트 · 교정 · 심미 진료
         </p>
-        <div className="mt-10 flex flex-col items-stretch justify-between gap-6 md:flex-row md:items-end">
-          <div className="flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-col items-stretch justify-between gap-6 md:mt-10 md:flex-row md:items-end">
+          {/* 모바일은 영상 가리지 않게 CTA 숨김. 예약·전화는 플로팅 버튼으로 */}
+          <div className="hidden flex-wrap gap-3 md:flex">
             <button type="button" onClick={onBook} className="bg-brand px-6 py-3 text-[13px] font-light text-cream">
               상담 예약하기
             </button>

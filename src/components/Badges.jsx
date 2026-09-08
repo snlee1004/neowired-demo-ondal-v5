@@ -3,7 +3,7 @@ import { badges } from "../content/site.js";
 export default function Badges() {
   const loop = [...badges, ...badges, ...badges];
   return (
-    <section className="overflow-hidden bg-paper py-14">
+    <section className="overflow-hidden bg-paper pb-10 pt-10 md:py-14">
       <div className="marquee-track flex w-max items-center gap-16 px-6">
         {loop.map((name, i) => (
           <span

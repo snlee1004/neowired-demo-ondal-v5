@@ -22,12 +22,15 @@ function useCount(to, active) {
 function StatItem({ item, active }) {
   const n = useCount(item.to, active && !item.text);
   return (
-    <div className="flex min-h-[160px] flex-col-reverse justify-between rounded-[7px] bg-brand p-[30px] text-paper">
-      <p className="font-sans text-[38px] font-light leading-none md:text-[40px]">
+    <div className="flex flex-col gap-2 rounded-[7px] bg-brand px-3 py-4 text-paper md:gap-3 md:p-6">
+      {/* 모바일 2열이면 라벨이 한 글자씩 떨어지므로 한 줄 고정 */}
+      <p className="whitespace-nowrap font-sans text-[12px] font-light leading-none tracking-tight md:text-[18px] md:tracking-normal">
+        {item.label}
+      </p>
+      <p className="font-sans text-[32px] font-light leading-none md:text-[40px]">
         {item.text ? item.text : n}
         {item.suffix}
       </p>
-      <p className="mb-6 font-sans text-[16px] font-light md:text-[18px]">{item.label}</p>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import ImgSlot from "./ImgSlot.jsx";
 
 export default function Doctors() {
   return (
-    <section id="doctors" className="bg-[#f6f3f1] py-24">
+    <section id="doctors" className="bg-[#f6f3f1] pb-8 pt-8 md:pb-10 md:pt-16">
       <div className="mx-auto max-w-[1140px] px-5">
         <h2 className="font-serif text-[28px] font-light md:text-[36px]">3인 분과별 전문의 협진</h2>
         <ul className="mt-3 space-y-1 text-[14px] font-normal leading-[1.8] text-ink/90 md:text-[15px]">
